@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyAppAlumno</string>
+
+    <string name="nombre">Nombre</string>
+    <string name="carrera">Carrera</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="telefono">Telefono</string>
+    <string name="documento">Nro de Documento</string>
+
+    <string name="txt_nombre">Introduzca Nombre</string>
+    <string name="txt_carrera">Introduzca Carrera</string>
+    <string name="txt_correo">Introduzca Correo</string>
+    <string name="txt_telefono">Introduzca Telefono</string>
+    <string name="txt_documento">Introduzca Nro de Documento</string>
+    <string name="btn_guardar">Guardar</string>
+</resources>
