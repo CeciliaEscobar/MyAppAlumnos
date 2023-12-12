@@ -10,34 +10,34 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
 
-    private List<User> users;
+    private List<Student> students;
     private int selectedPosition = -1;
 
     private Context context;
 
-    public UserAdapter(List<User> users, Context context) {
-        this.users = users;
+    public StudentAdapter(List<Student> students, Context context) {
+        this.students = students;
         this.context = context;
     }
 
     @Override
-    public UserViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_item, parent, false);
-        return new UserViewHolder(view);
+    public StudentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.student_item, parent, false);
+        return new StudentViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(UserViewHolder holder, int position) {
-        User user = users.get(position);
+    public void onBindViewHolder(StudentViewHolder holder, int position) {
+        Student student = students.get(position);
         // Se configura los datos de los elementos de la lista
-        holder.idTV.setText(String.valueOf(user.getId()));
-        holder.nombreTV.setText(user.getName());
-        holder.nombreTV.setText(user.getCareer());
-        holder.correoTV.setText(user.getEmail());
-        holder.correoTV.setText(user.getPhone());
-        holder.nombreTV.setText(user.getDocument());
+        holder.idTV.setText(String.valueOf(student.getId()));
+        holder.nombreTV.setText(student.getName());
+        holder.nombreTV.setText(student.getCareer());
+        holder.correoTV.setText(student.getEmail());
+        holder.correoTV.setText(student.getPhone());
+        holder.nombreTV.setText(student.getDocument());
 
 
 
@@ -52,7 +52,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @Override
     public int getItemCount() {
-        return users.size();
+        return students.size();
     }
 
     public int getSelectedPosition() {
@@ -63,11 +63,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         this.selectedPosition = selectedPosition;
     }
 
-    class UserViewHolder extends RecyclerView.ViewHolder {
+    class StudentViewHolder extends RecyclerView.ViewHolder {
         // Se declararan los elementos de la vista (Layout user_item.xml)
         TextView idTV, nombreTV, carreraTV, correoTV, telefonoTV, documentoTV;
 
-        public UserViewHolder(View itemView) {
+        public StudentViewHolder(View itemView) {
             super(itemView);
             idTV = itemView.findViewById(R.id.textItemId);
             nombreTV = itemView.findViewById(R.id.textItemNombre);

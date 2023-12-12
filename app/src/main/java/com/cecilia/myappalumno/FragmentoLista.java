@@ -26,7 +26,7 @@ import java.util.List;
 
 public class FragmentoLista extends Fragment {
 
-    private UserAdapter userAdapter;
+    private StudentAdapter studentAdapter;
     View view;
 
     @Override
@@ -34,13 +34,13 @@ public class FragmentoLista extends Fragment {
         view = inflater.inflate(R.layout.fragment_lista, container, false);
 
 //        String url = "http://10.0.2.2:8098/api/getUsers";
-        String url = "https://my-usuario-cecilia.onrender.com/api/getStudents"; // Reemplazar por la url desplegada en Render
+        String url = "https://my-alumno-cecilia.onrender.com/api/getStudents"; // Reemplazar por la url desplegada en Render
         RequestQueue queue = Volley.newRequestQueue(getContext());
 
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                List<User> users = new ArrayList<>();
+                List<Student> students = new ArrayList<>();
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject userObject = response.getJSONObject(i);
@@ -51,15 +51,15 @@ public class FragmentoLista extends Fragment {
                         String phone = userObject.getString("phone");
                         String document = userObject.getString("document");
 
-                        users.add(new User(id, name, career, email, phone, document));
+                        students.add(new Student(id, name, career, email, phone, document));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-                userAdapter = new UserAdapter(users, getContext());
+                studentAdapter = new StudentAdapter(students, getContext());
                 RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
 
-                recyclerView.setAdapter(userAdapter);
+                recyclerView.setAdapter(studentAdapter);
 
                 LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
                 recyclerView.setLayoutManager(layoutManager);

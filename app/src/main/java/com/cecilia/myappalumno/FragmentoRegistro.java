@@ -51,7 +51,7 @@ public class FragmentoRegistro extends Fragment {
                 String document = documentoEditText.getText().toString();
 
                 //String url = "http://10.0.2.2:8098/api/saveUser"; // url local
-                String url = "https://my-usuario-cecilia.onrender.com/api/saveStudent"; // Reemplazar por la url desplegada en Render
+                String url = "https://my-alumno-cecilia.onrender.com/api/saveStudent"; // Reemplazar por la url desplegada en Render
 
                 RequestQueue queue = Volley.newRequestQueue(getActivity());
 

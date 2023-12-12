@@ -1,6 +1,6 @@
 package com.cecilia.myappalumno;
 
-public class User {
+public class Student {
     private Integer id;
     private String name;
 
@@ -11,10 +11,10 @@ public class User {
 
     private String document;
 
-    public User() {
+    public Student() {
     }
 
-    public User(Integer id, String name, String career, String email, String phone, String document) {
+    public Student(Integer id, String name, String career, String email, String phone, String document) {
         this.id = id;
         this.name = name;
         this.career = career;
