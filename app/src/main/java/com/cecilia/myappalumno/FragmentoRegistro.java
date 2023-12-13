@@ -70,10 +70,10 @@ public class FragmentoRegistro extends Fragment {
                     protected Map<String, String> getParams() {
                         Map<String, String> params = new HashMap<String, String>();
                         params.put("name", name);
-                        params.put("career", email);
+                        params.put("career", career);
                         params.put("email", email);
-                        params.put("phone", email);
-                        params.put("document", email);
+                        params.put("phone", phone);
+                        params.put("document", document);
                         return params;
                     }
 

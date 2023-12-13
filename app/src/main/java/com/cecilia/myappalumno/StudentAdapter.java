@@ -34,10 +34,10 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
         // Se configura los datos de los elementos de la lista
         holder.idTV.setText(String.valueOf(student.getId()));
         holder.nombreTV.setText(student.getName());
-        holder.nombreTV.setText(student.getCareer());
+        holder.carreraTV.setText(student.getCareer());
         holder.correoTV.setText(student.getEmail());
-        holder.correoTV.setText(student.getPhone());
-        holder.nombreTV.setText(student.getDocument());
+        holder.telefonoTV.setText(student.getPhone());
+        holder.documentoTV.setText(student.getDocument());
 
 
 
